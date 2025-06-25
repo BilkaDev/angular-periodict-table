@@ -1,7 +1,8 @@
-.container,.form, {
+.container,.form {
   margin: 10px;
 }
 .title {
+  margin-bottom: 10px;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
@@ -14,6 +15,7 @@
 
 .action {
   display: flex;
+  min-height: 40px;
   justify-content: center;
   gap: 10px;
 }
