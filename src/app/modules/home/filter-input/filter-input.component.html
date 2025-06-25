@@ -1,0 +1,10 @@
+<mat-form-field class="container" appearance="fill">
+  <mat-label>Filter</mat-label>
+  <input
+    matInput
+    (input)="onFilterInput($event)"
+    placeholder="Filter by all fields" />
+  <mat-progress-bar
+    mode="determinate"
+    [value]="determinateValue"></mat-progress-bar>
+</mat-form-field>
