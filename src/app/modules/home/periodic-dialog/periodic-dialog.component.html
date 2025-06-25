@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="title">{{ data.name }}</h2>
+  <form class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Position</mat-label>
+      <input type="number" matInput [formControl]="controls.position" />
+      @if (controls.position.invalid) {
+        <mat-error>{{ getErrorMessage(controls.position) }} </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="controls.name" />
+      @if (controls.name.invalid) {
+        <mat-error>{{ getErrorMessage(controls.name) }} </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Weight</mat-label>
+      <input type="number" matInput [formControl]="controls.weight" />
+      @if (controls.weight.invalid) {
+        <mat-error>{{ getErrorMessage(controls.weight) }} </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Symbol</mat-label>
+      <input matInput [formControl]="controls.symbol" />
+      @if (controls.symbol.invalid) {
+        <mat-error>{{ getErrorMessage(controls.symbol) }} </mat-error>
+      }
+    </mat-form-field>
+
+    <div class="action">
+      @if (!isLoading) {
+        <button mat-button (click)="dialogRef.close()">Cancel</button>
+        <button mat-flat-button color="primary" (click)="save()">Save</button>
+      } @else {
+        <mat-spinner diameter="20"></mat-spinner>
+      }
+    </div>
+  </form>
+</div>

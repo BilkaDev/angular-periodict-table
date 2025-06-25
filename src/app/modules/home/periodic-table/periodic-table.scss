@@ -13,6 +13,7 @@ $item-width: 100px;
 
 
 .item-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -24,6 +25,7 @@ $item-width: 100px;
   .top{
     display: flex;
     justify-content: space-between;
+    min-height: 25px;
     .weight {
       font-size: 0.8em;
       color: darkred;
@@ -56,6 +58,22 @@ $item-width: 100px;
       color: darkgreen;
     }
   }
+  &:hover {
+    background-color: lightyellow;
+  }
+  &:hover .position {
+    display: none;
+  }
+  &:hover .edit-btn {
+    display: block;
+  }
+}
+
+.edit-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (min-width: 400px) {

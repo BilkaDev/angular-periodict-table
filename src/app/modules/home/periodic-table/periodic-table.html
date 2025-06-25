@@ -2,6 +2,13 @@
   <div class="table-container">
     @for (item of data; track item) {
     <div class="item-container">
+      <button
+        class="edit-btn"
+        matIconButton
+        (click)="editElement(item)"
+        aria-label="edit icon">
+        <mat-icon>edit</mat-icon>
+      </button>
       <div class="top">
         <span class="weight">{{item.weight}}</span>
         <span class="position">{{item.position}}</span>

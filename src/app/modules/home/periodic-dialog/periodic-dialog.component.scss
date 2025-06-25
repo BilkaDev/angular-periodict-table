@@ -1,0 +1,19 @@
+.container,.form, {
+  margin: 10px;
+}
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
