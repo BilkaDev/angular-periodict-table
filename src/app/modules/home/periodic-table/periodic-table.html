@@ -10,7 +10,7 @@
 
 <ng-template #table>
   <div class="table-container">
-    @for (item of data; track item) {
+    @for (item of sortedData; track item.position) {
     <div class="item-container">
       <button
         class="edit-btn"

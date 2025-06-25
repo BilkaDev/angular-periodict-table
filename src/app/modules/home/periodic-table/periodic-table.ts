@@ -27,7 +27,12 @@ export class PeriodicTable {
   get isEmpty(): boolean {
     return this.data?.length === 0;
   }
+
   editElement(el: EventPeriodicElement) {
     this.edit.emit(el);
+  }
+
+  get sortedData(): Data[] {
+    return [...this.data].sort((a, b) => a.position - b.position);
   }
 }
