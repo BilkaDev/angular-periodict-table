@@ -1,0 +1,18 @@
+<div class="outerContainer">
+  <div class="table-container">
+    @for (item of data; track item) {
+    <div class="item-container">
+      <div class="top">
+        <span class="weight">{{item.weight}}</span>
+        <span class="position">{{item.position}}</span>
+      </div>
+      <div class="bottom">
+        <div class="symbol-container">
+          <span class="symbol">{{item.symbol}}</span>
+        </div>
+        <span class="name">{{item.name}}</span>
+      </div>
+    </div>
+    }
+  </div>
+</div>

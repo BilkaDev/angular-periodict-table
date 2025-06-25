@@ -1,0 +1,84 @@
+$item-width: 100px;
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+}
+.table-container {
+  width: #{$item-width*3};
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: $item-width;
+  width: $item-width;
+  border: solid 1px black;
+  background-color: antiquewhite;
+
+  .top{
+    display: flex;
+    justify-content: space-between;
+    .weight {
+      font-size: 0.8em;
+      color: darkred;
+    }
+    .position{
+      font-size: 1.2em;
+      font-weight: bold;
+      color: darkblue;
+    }
+  }
+  .bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .symbol-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .symbol {
+      text-align: center;
+      flex: 1;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: darkgreen;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .table-container {
+    width: #{$item-width*4};
+  } }
+@media (min-width: 500px) {
+  .table-container {
+    width: #{$item-width*5};
+  } }
+@media (min-width: 600px) {
+  .table-container {
+    width: #{$item-width*6};
+  } }
+@media (min-width: 700px) {
+  .table-container {
+    width: #{$item-width*7};
+  } }
+@media (min-width: 800px) {
+  .table-container {
+    width: #{$item-width*8};
+  } }
+@media (min-width: 900px) {
+  .table-container {
+    width: #{$item-width*9};
+  } }
