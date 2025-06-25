@@ -1,4 +1,4 @@
-$item-width: 100px;
+$item-width: 110px;
 
 .outerContainer {
   display: flex;
@@ -7,16 +7,14 @@ $item-width: 100px;
 .table-container {
   width: #{$item-width*3};
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
-
 
 .item-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 3px;
   height: $item-width;
   width: $item-width;
   border: solid 1px black;
@@ -25,13 +23,13 @@ $item-width: 100px;
   .top{
     display: flex;
     justify-content: space-between;
-    min-height: 25px;
+    min-height: 20px;
     .weight {
       font-size: 0.8em;
       color: darkred;
     }
     .position{
-      font-size: 1.2em;
+      font-size: 1em;
       font-weight: bold;
       color: darkblue;
     }
@@ -49,14 +47,16 @@ $item-width: 100px;
     .symbol {
       text-align: center;
       flex: 1;
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: bold;
     }
     .name {
-      font-size: 1.2em;
+      font-size: 0.9em;
       font-weight: bold;
       color: darkgreen;
       text-align: center;
+      word-wrap: break-word;
+      white-space: normal;
     }
   }
   &:hover {
@@ -89,27 +89,27 @@ $item-width: 100px;
   color: #666;
 }
 
-@media (min-width: 400px) {
+@media (min-width: #{($item-width * 4) + 10px}) {
   .table-container {
     width: #{$item-width*4};
   } }
-@media (min-width: 500px) {
+@media (min-width: #{($item-width * 5) + 10px}) {
   .table-container {
     width: #{$item-width*5};
   } }
-@media (min-width: 600px) {
+@media (min-width: #{($item-width * 6) + 10px}) {
   .table-container {
-    width: #{$item-width*6};
+    width: #{($item-width * 6)};
   } }
-@media (min-width: 700px) {
+@media (min-width: #{($item-width * 7) + 10px}) {
   .table-container {
     width: #{$item-width*7};
   } }
-@media (min-width: 800px) {
+@media (min-width: #{($item-width * 8) + 10px}) {
   .table-container {
     width: #{$item-width*8};
   } }
-@media (min-width: 900px) {
+@media (min-width: #{($item-width * 9) + 10px}) {
   .table-container {
     width: #{$item-width*9};
   } }

@@ -21,7 +21,7 @@ export class FormService {
         nonNullable: true,
       }),
       name: new FormControl('', {
-        validators: [Validators.required],
+        validators: [Validators.required, Validators.maxLength(20)],
         nonNullable: true,
       }),
     });
