@@ -1,9 +1,9 @@
 <div class="outerContainer">
   @if (!isLoaded){
   <ng-container *ngTemplateOutlet="loading"></ng-container>
-  } @if (data && data.length === 0 && isLoaded) {
+  } @if (isEmpty && isLoaded) {
   <ng-container *ngTemplateOutlet="noData"></ng-container>
-  } @if (data && data.length > 0 && isLoaded) {
+  } @if (!isEmpty && isLoaded) {
   <ng-container *ngTemplateOutlet="table"></ng-container>
   }
 </div>
