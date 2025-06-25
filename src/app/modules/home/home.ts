@@ -13,11 +13,13 @@ import { PeriodicFacadeService } from './periodic-facade.service';
   standalone: true,
 })
 export class Home {
-  periodicFacadeService = inject(PeriodicFacadeService);
-  filterValue = this.periodicFacadeService.filterValue;
-  filteredData = this.periodicFacadeService.filteredData;
+  private periodicFacadeService = inject(PeriodicFacadeService);
 
-  editElement(element: EventPeriodicElement) {
+  public filterValue = this.periodicFacadeService.filterValue;
+  public filteredData = this.periodicFacadeService.filteredData;
+  public isLoadedData = this.periodicFacadeService.isLoadedDate;
+
+  public editElement(element: EventPeriodicElement) {
     this.periodicFacadeService.editElement(element);
   }
 }

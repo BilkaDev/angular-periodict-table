@@ -20,9 +20,11 @@ const ELEMENT_DATA: Periodic[] = [
 export class PeriodicService {
   private _loading = signal(true);
   private _elements = signal<Periodic[]>([]);
+  private _loadedData = signal(false);
 
   loading = computed(() => this._loading());
   elements = computed(() => this._elements());
+  loadedData = computed(() => this._loadedData());
 
   constructor() {
     this.loadElements();
@@ -34,6 +36,7 @@ export class PeriodicService {
       .pipe(delay(1000))
       .subscribe(data => {
         this._elements.set(data);
+        this._loadedData.set(true);
         this._loading.set(false);
       });
   }

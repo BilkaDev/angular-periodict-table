@@ -10,9 +10,10 @@ import { PeriodicDialogComponent } from './periodic-dialog/periodic-dialog.compo
 export class PeriodicFacadeService {
   private periodicService = inject(PeriodicService);
   private dialog = inject(MatDialog);
+  public isLoadedDate = this.periodicService.loadedData;
 
-  filterValue = signal('');
-  filteredData = computed(() => {
+  public filterValue = signal('');
+  public filteredData = computed(() => {
     const filter = this.filterValue().toLowerCase();
     return this.periodicService
       .elements()
@@ -23,7 +24,7 @@ export class PeriodicFacadeService {
       );
   });
 
-  editElement(element: EventPeriodicElement) {
+  public editElement(element: EventPeriodicElement) {
     this.dialog.open(PeriodicDialogComponent, {
       data: { ...element },
     });

@@ -77,6 +77,18 @@ $item-width: 100px;
   right: 0;
 }
 
+.loading,
+.no-data {
+  width: 100%;
+  padding: 20px 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
 @media (min-width: 400px) {
   .table-container {
     width: #{$item-width*4};

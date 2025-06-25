@@ -1,3 +1,6 @@
 <app-filter-input [filterValue]="filterValue"></app-filter-input>
-<app-periodic-table [data]="filteredData()" (edit)="editElement($event)">
+<app-periodic-table
+  [data]="filteredData()"
+  (edit)="editElement($event)"
+  [isLoaded]="isLoadedData()">
 </app-periodic-table>
